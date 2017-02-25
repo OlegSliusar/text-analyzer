@@ -1,7 +1,6 @@
-text = ''
-line_count = 0
-File.open("text.txt").each do |line|
-  line_count += 1
-  text << line
-end
+lines = File.readlines("text.txt")
+line_count = lines.size
+text = lines.join
+total_characters = text.length
+puts "#{total_characters} characters"
 puts "#{line_count} lines"
